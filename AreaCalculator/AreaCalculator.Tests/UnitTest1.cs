@@ -1,15 +1,26 @@
-namespace AreaCalculator.Tests;
+using AreaCalculator;
 
-public class Tests
+namespace AreaCalculator.Tests
 {
-    [SetUp]
-    public void Setup()
+    public class Tests
     {
-    }
+        [SetUp]
+        public void Setup()
+        {
+            
+        }
 
-    [Test]
-    public void Test1()
-    {
-        Assert.Pass();
+        [Test]
+        public void Test1()
+        {
+            var shape = Factory.CreateShape("circle", new double[]{ 1 });
+            shape.GetArea();
+
+            Triangle shape2 = (Triangle)Factory.CreateShape("Triangle", new double[]{ 1, 3, 43 });
+            shape2.IsRight();
+
+            Assert.Pass();
+        }
     }
 }
+
