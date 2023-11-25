@@ -6,7 +6,7 @@ namespace AreaCalculator
         private double b;
         private double c;
 
-        public Triangle(double[] dimensions)
+        internal Triangle(double[] dimensions)
         {
             Array.Sort(dimensions);
             a = dimensions[0];
@@ -22,7 +22,7 @@ namespace AreaCalculator
 
         public bool IsRight()
         {
-            return Math.Pow(c, 2) - Math.Pow(b, 2) - Math.Pow(c, 2) == 0;
+            return Math.Pow(c, 2) - Math.Pow(b, 2) - Math.Pow(a, 2) == 0;
         }
     }
 }
